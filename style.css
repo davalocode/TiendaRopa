@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+    width: 95%;
+    margin: 0px auto;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #ddd;
+}
+
+.categories {
+	width: 20%;
+	float: left;
+}
+
+.categories ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.categories li {
+	margin-bottom: 10px;
+}
+
+.categories a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color: #333;
+	border: 1px solid #ddd;
+}
+
+.categories a:hover {
+	background-color: #ddd;
+}
+
+.content {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product {
+	text-align: center;
+	border: 1px solid #ddd;
+	margin-left: 4%;
+	width: 45%;
+}
+
+.product h2 {
+	margin: 10px;
+}
+
+.product img {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.product p {
+	margin: 10px;
+}
+
+.product button {
+	margin: 10px;
+	padding: 5px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.product button:hover {
+	background-color: #444;
+}
+
+footer {
+	width: 100%;
+	background-color: #ddd;
+	padding: 10px;
+	text-align: center;
+	clear: both;
+}
+
+main {
+    margin-bottom: 1%;
+}
