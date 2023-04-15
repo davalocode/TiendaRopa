@@ -3,11 +3,8 @@
 <body>
     <?php
     
-    $servidor = "sdb-57.hosting.stackcp.net";
-    $database = "proyectotienda-35303135db7e";
-    $usuario = "dani-8dfc";
-    $password = "usuario123";
-    
+    include 'database.php';
+
     $enlace = mysqli_connect($servidor, $usuario, $password, $database);
     
     if (!$enlace) {
@@ -25,7 +22,7 @@
       echo "<li><a href='#'>Inicio</a></li>";
       echo "<li><a href='#'>Inicio</a></li>";
       echo "<li><a href='#'>Inicio</a></li>";
-      echo "<li><a href='#'>Inicio</a></li>";
+      echo "<li><a href='iniciosesion.php?Logout=1'>Cerrar sesión</a></li>";
       echo "</ul>";
       echo "</nav>";
       echo "</header>";
