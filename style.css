@@ -113,3 +113,15 @@ footer {
 main {
     margin-bottom: 1%;
 }
+
+table {
+	width: 100%;
+}
+
+tr {
+	background-color: lightblue;
+}
+
+.administrador {
+	background-color: royalblue;
+}
