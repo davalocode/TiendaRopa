@@ -77,7 +77,14 @@
 					'{$telefono}',
 					'N')";
                 	if (mysqli_query($enlace,$query)){
-                    	echo "<p> Has sido registrado</p>";
+						$query="INSERT INTO carrito (id_usuario, fecha_creacion) VALUES((SELECT id_usuario FROM usuarios WHERE UPPER(nombre_usuario)='{$usermayus}'), current_timestamp())";
+						$sentencia = mysqli_query($enlace,$query);
+						if (!$sentencia) {
+							echo "<p>El carrito no se ha creado correctamente</p>";
+						}
+						else {
+							echo "<p> Has sido registrado</p>";
+						}
                 	}
 
                 	else {

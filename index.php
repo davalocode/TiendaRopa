@@ -20,6 +20,7 @@
       echo "<li><a href='#'>Inicio</a></li>";
       echo "<li><a href='#'>Inicio</a></li>";
       echo "<li><a href='iniciosesion.php?Logout=1'>Cerrar sesión</a></li>";
+      echo "<li><a href='mostrar_carrito.php'>Mi Carrito</a></li>";
       echo "</ul>";
       echo "</nav>";
       echo "</header>";
@@ -37,7 +38,7 @@
       echo "<main class='content'>";
 
 
-        $query = "SELECT  nombre, descripcion, imagen, precio_unidad
+        $query = "SELECT id_producto, nombre, descripcion, imagen, precio_unidad
         FROM productos"; 
         $resultado = mysqli_query($enlace,$query); 
         
@@ -46,6 +47,7 @@
       while($row = $resultado->fetch_assoc()) {
         
         $nombre=($row["nombre"]);
+        $id=($row["id_producto"]);
         $descripcion=($row["descripcion"]);
         $imagen=($row["imagen"]);
         $precio_unidad=($row["precio_unidad"]);
@@ -55,7 +57,7 @@
         echo "<p>Precio: $precio_unidad</p>";
         echo "<img src='$imagen' alt='$nombre'>";
         echo "<br>";
-        echo "<button>Añadir al Carrito</button>";
+        echo "<a href='anadirCarrito.php?producto_id={$id}'>Añadir al Carrito</a>";
         echo "</div>";
 
       }
